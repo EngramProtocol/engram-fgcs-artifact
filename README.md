@@ -1,11 +1,19 @@
-# Engram FGCS Submission Artifact
+# Engram Paper Artifact
 
 This repository serves as the citable archival entry accompanying the manuscript:
 
-> **Engram: A Bitcoin-Anchored Modular Architecture for Scalable Data Publication and Persistent Decentralized Storage**
-> Submitted to *Future Generation Computer Systems* (FGCS), 2026.
+> **Engram: Bitcoin-Anchored Data Publication and Persistent Decentralized
+> Storage** — under review at *ACM Transactions on Internet Technology*
+> (TOIT), 2026.
 
-A persistent identifier for this entry is registered for long-term preservation:
+An earlier version of this manuscript was submitted to *Future Generation
+Computer Systems* (FGCS) under the title "A Bitcoin-Anchored Modular
+Architecture for Scalable Data Publication and Persistent Decentralized
+Storage"; the `v1.0.0-FGCS-evaluation` release tag corresponds to that
+submission.
+
+A persistent identifier for this entry is registered for long-term
+preservation:
 
 **DOI:** `10.5281/zenodo.19879674`
 
