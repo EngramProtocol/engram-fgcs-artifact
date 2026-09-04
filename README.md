@@ -1,6 +1,6 @@
 # Engram Paper Artifact
 
-This repository serves as the citable archival entry accompanying the manuscript:
+This repository is the citable archival entry accompanying the manuscript:
 
 > **Engram: Bitcoin-Anchored Data Publication and Persistent Decentralized
 > Storage** — under review at *ACM Transactions on Internet Technology*
@@ -9,32 +9,65 @@ This repository serves as the citable archival entry accompanying the manuscript
 An earlier version of this manuscript was submitted to *Future Generation
 Computer Systems* (FGCS) under the title "A Bitcoin-Anchored Modular
 Architecture for Scalable Data Publication and Persistent Decentralized
-Storage"; the `v1.0.0-FGCS-evaluation` release tag corresponds to that
+Storage". The `v1.0.0-FGCS-evaluation` release tag corresponds to that
 submission.
 
-A persistent identifier for this entry is registered for long-term
-preservation:
-
 **DOI:** `10.5281/zenodo.19879674`
+
+The work is developed at Hanoi University of Science and Technology with
+A-Star Group and the University of Massachusetts Boston.
 
 ---
 
 ## Scope of this archive
 
-The paper reports a bounded feasibility evaluation of the Engram protocol, combining a geo-distributed prototype, a separate outage-resilience deployment, a 500-node discrete-event simulation, and a historical workload trace. The evidentiary status of each result is described in the paper itself; this archive establishes a stable reference point for that evaluation.
+The paper reports a bounded feasibility evaluation of the Engram protocol,
+combining a geo-distributed prototype, a separate outage-resilience
+deployment, a 500-node discrete-event simulation, and a historical workload
+trace. The evidentiary status of each result is stated in the paper itself.
+This repository exists to give that evaluation a stable, citable reference
+point; it is not where the code lives.
 
-## Source code availability
+## Where the code lives
 
-The Engram prototype source code is maintained under the [Engram Protocol GitHub organization](https://github.com/EngramProtocol) and is currently held under restricted release pending commercialization. Reasonable requests for academic access may be directed to the corresponding author of the paper.
+The protocol and research track is developed in public under the
+[Engram Protocol organization](https://github.com/EngramProtocol), Apache-2.0:
+
+| Repository | What it is |
+|---|---|
+| [engram-anchor-bridge](https://github.com/EngramProtocol/engram-anchor-bridge) | Checkpoint anchoring bridge: reads finalized blocks, builds Merkle-batched commitments, submits them to the settlement backend |
+| [engram-simulation-benchmark](https://github.com/EngramProtocol/engram-simulation-benchmark) | Evaluation suite reproducing the paper's measured results, with a table mapping each command to the result it produces |
+
+Application-layer and internal infrastructure repositories are private.
+Everything on the protocol and research track is public, and the roadmap for
+what moves into public next (direct Bitcoin anchoring, an independent
+verification library, a reference implementation of verifiable retrieval) is
+described on the [organization profile](https://github.com/EngramProtocol).
+
+## Reproducing the reported results
+
+Start with `engram-simulation-benchmark`. Its README maps each module to the
+section and table it produces, and states which modules run offline and which
+need a testnet endpoint. If a number in the paper and a module's output
+disagree, please open an issue on that repository rather than emailing; a
+public correction is more useful than a private one.
 
 ## Data availability
 
-The supporting data---including the historical occupancy trace underlying the settlement-cost analysis, the configuration parameters and random seeds used in the 500-node simulation, and the raw measurement logs of the prototype experiments---are retained by the authors and may be shared upon reasonable academic request, subject to the same release constraints as the source code.
+The supporting data includes the historical occupancy trace behind the
+settlement-cost analysis, the configuration parameters and random seeds for
+the 500-node simulation, and the raw measurement logs from the prototype
+experiments. Seeds and configuration are being migrated into
+`engram-simulation-benchmark` so that the simulation results are reproducible
+from the public repository alone. Until that migration is complete, the
+remaining material is available on request; open an issue or contact the
+corresponding author of the paper.
 
 ## Citation
 
-If this work informs subsequent academic research, please cite the accompanying paper. A BibTeX entry will be provided upon final publication.
+If this work informs subsequent research, please cite the accompanying paper.
+A BibTeX entry will be added on final publication.
 
-## Contact
+## License
 
-For inquiries regarding this archive or access requests, please contact the corresponding author listed in the paper.
+MIT. See `LICENSE`. Code repositories under the organization are Apache-2.0.
